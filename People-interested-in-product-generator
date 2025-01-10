@@ -1,0 +1,81 @@
+//# of people interested in this product
+<div class="custom-interested-wrapper" style="margin-top: 16px; font-size: 18px; color: #333;">
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="#00856a">
+              <path d="M6.54631 0L5.27425 2.46168C4.36528 4.22032 3.14703 5.81977 1.67162 7.19161L1.50449 7.34107C0.55691 8.21212 0.0154939 9.40513 0.000302026 10.6555V10.8138C-0.0247955 13.2624 1.51619 15.4823 3.90005 16.4317L4.14146 16.5284C5.70495 17.1572 7.47123 17.1572 9.03472 16.5284H9.09043C11.4921 15.5404 13.033 13.2842 12.9995 10.805V6.9894C12.1991 8.72007 10.7456 10.1057 8.9233 10.8753C8.9233 10.8753 8.9233 10.8753 8.86759 10.8753C8.81188 10.8753 8.16192 11.1303 7.88336 10.8753C7.63457 10.637 7.61074 10.261 7.82765 9.99616L7.89265 9.9522H7.93907C10.0707 8.41804 10.5677 5.57545 9.07186 3.47272C7.86479 1.73196 6.54631 0 6.54631 0Z"></path>
+            </svg>
+  <span class="custom-interested-text">Loading...</span>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const randomInterestedCount = Math.floor(Math.random() * 100) + 1;
+    const interestedText = document.querySelector(".custom-interested-text");
+    if (interestedText) {
+      interestedText.textContent = `${randomInterestedCount} people are interested in this product`;
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Generate a random number between 1 and 100 (you can adjust the range as needed)
+    const randomInterestedCount = Math.floor(Math.random() * 100) + 1;
+
+    // Update the text content dynamically
+    const interestedCountElement = document.getElementById("interestedCount");
+    interestedCountElement.textContent = `${randomInterestedCount} people are interested in this kitten`;
+  });
+</script> 
+
+
+
+<div class="text_intrested">
+  <p>
+    <span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17" fill="#AF84D4">
+        <path d="M6.54631 0L5.27425 2.46168C4.36528 4.22032 3.14703 5.81977 1.67162 7.19161L1.50449 7.34107C0.55691 8.21212 0.0154939 9.40513 0.000302026 10.6555V10.8138C-0.0247955 13.2624 1.51619 15.4823 3.90005 16.4317L4.14146 16.5284C5.70495 17.1572 7.47123 17.1572 9.03472 16.5284H9.09043C11.4921 15.5404 13.033 13.2842 12.9995 10.805V6.9894C12.1991 8.72007 10.7456 10.1057 8.9233 10.8753C8.9233 10.8753 8.9233 10.8753 8.86759 10.8753C8.81188 10.8753 8.16192 11.1303 7.88336 10.8753C7.63457 10.637 7.61074 10.261 7.82765 9.99616L7.89265 9.9522H7.93907C10.0707 8.41804 10.5677 5.57545 9.07186 3.47272C7.86479 1.73196 6.54631 0 6.54631 0Z"></path>
+      </svg>
+    </span>
+    <span class="wow fadeInUp animated animated" id="interestedCount" style="visibility: visible;"></span>
+  </p>
+</div>
+
+
+
+{% document.addEventListener("DOMContentLoaded", function() {
+    // Generate a random number between 1 and 100 (you can adjust the range as needed)
+    const randomInterestedCount = Math.floor(Math.random() * 100) + 1;
+
+    // Update the text content dynamically
+    const interestedCountElement = document.getElementById("interestedCount");
+    interestedCountElement.textContent = `${randomInterestedCount} people are interested in this kitten`;
+  }); %}
