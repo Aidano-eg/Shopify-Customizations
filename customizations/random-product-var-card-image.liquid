@@ -1,0 +1,36 @@
+{%- assign variant_count = product.variants | size -%}
+{%- if variant_count > 1 -%}
+    {%- assign random_index = "now" | date: "%N" | modulo: variant_count -%}
+    {%- assign random_variant = product.variants[random_index] -%}
+    {%- assign image_to_show = random_variant.image -%}
+{%- else -%}
+    {%- assign image_to_show = product.featured_image -%}
+{%- endif -%}
+
+<img src="{{ image_to_show | img_url: '500x' }}" alt="{{ product.title }}">
+
+  /*
+  Steps to Implement:
+
+    Find the Collection Product Loop
+        Open your Shopify theme editor.
+        Go to Sections > collection-template.liquid or Snippets > product-card.liquid (or whichever file renders products in the collection).
+
+    Modify the Image Display Logic
+        By default, Shopify loads product.featured_image. You need to select a random variant’s image instead.
+        Use Shopify Liquid to randomly pick a variant image.
+
+Explanation:
+
+    The code checks if a product has more than one variant.
+    It uses the current timestamp ("now" | date: "%N") to generate a pseudo-random number.
+    This number is used to pick a random variant from the product’s variants.
+    The image of the selected variant is displayed instead of the default product image.
+
+Additional Considerations:
+
+    If a product has variants without images, you might need to add a fallback to ensure an image is always displayed.
+    Shopify Liquid doesn’t support true randomness directly, so the randomness comes from the timestamp, which will appear random to users.
+
+This should dynamically display a different color variant for each product in your collection pages without altering your product structure. Let me know if you need modifications!
+  */
