@@ -1,0 +1,18 @@
+{% comment %}
+Buy 4 sassafras, get a base mat free promo flash message with gift icon
+{% endcomment %}
+
+
+{% if product.title contains 'Sassafras' and product.compare_at_price == 0 %}
+    {% unless product.title contains 'Estate' or product.tags contains 'sassafras-bundle' %}
+
+        <product-message class="product-message product-message--info has-motion relative" style="--bg-color: #76d7a7; --text-color: #090302; transition-delay: 0s; transition-duration: 0s;" data-block-id="message_gitmmL">
+                        <div class="product-message__inner"><svg class="icon icon--gift" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false" role="presentation"><path stroke="currentColor" fill="none" d="m 13.537655,7.996877 v 6.700339 H 2.6040452 V 7.996877"></path>
+                <rect stroke="currentColor" fill="none" x="1.3929645" y="4.6346269" width="13.3332" height="3.3333001"></rect>
+                <path stroke="currentColor" fill="none" d="M 8.0595646,14.634526 V 4.6346269"></path>
+                <path stroke="currentColor" fill="none" d="m 8.0595647,4.6346267 h -2.99997 a 1.66665,1.66665 0 0 1 0,-3.3333 c 2.33331,0 2.99997,3.3333 2.99997,3.3333 z"></path>
+                <path stroke="currentColor" fill="none" d="m 8.0595647,4.6346267 h 2.9999703 a 1.66665,1.66665 0 0 0 0,-3.3333 c -2.3333103,0 -2.9999703,3.3333 -2.9999703,3.3333 z"></path></svg>
+                <div class="rte rte--inherit-heading-color"><p><strong>Buy 4 Sassafras Inserts, Get a Free Mat Tray</strong></p><p>Pick any 4 Sassafras inserts and we’ll throw in the Mat Tray free.</p></div></div>
+        </product-message>
+    {% endunless %}
+{% endif %}
