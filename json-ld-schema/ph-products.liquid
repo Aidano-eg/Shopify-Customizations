@@ -23,7 +23,7 @@
 
 <script type="application/ld+json">
 {
-  "@context": "http://schema.org/",
+  "@context": "https://schema.org/",
   "@type": {% if has_variants %}"ProductGroup"{% else %}"Product"{% endif %},
   "@id": "{{ shop.url }}{{ product.url }}",
   "category": {{ product.type | json }},
@@ -40,7 +40,7 @@
   "offers": {
     "@id": {{ canonical_url | append: '?variant=' | append: current_variant.id | append: '#offer' | json }},
     "@type": "Offer",
-    "availability": "http://schema.org/InStock",
+    "availability": "https://schema.org/InStock",
     "price": {{ current_variant.price | money_without_currency | json }},
     "priceCurrency": "{{ cart.currency.iso_code }}",
     "url": {{ canonical_url | append: '?variant=' | append: current_variant.id | json }}
